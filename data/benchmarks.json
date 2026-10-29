@@ -1,0 +1,902 @@
+{
+  "metadata": {
+    "title": "Awesome LLM Security Benchmarks",
+    "tagline": "A curated catalog of benchmarks, datasets, and evaluation frameworks for the security, safety, and trustworthiness of large language models and LLM-based agents.",
+    "source_file": "data/source/Security Benchmarks.xlsx",
+    "source_sheet_title": "All Benchmarks",
+    "source_creator": "Sandar Ali",
+    "source_created": "2026-10-29T17:57:31Z",
+    "source_modified": "2026-10-29T17:58:39Z",
+    "entry_count": 41,
+    "category_count": 8,
+    "year_range": [
+      2018,
+      2025
+    ],
+    "columns": [
+      "#",
+      "Benchmark",
+      "Category",
+      "Year · Venue / Origin",
+      "Website / Code",
+      "Paper",
+      "Details",
+      "Security Type Targeted"
+    ],
+    "normalization_notes": "Details, Security Type Targeted, benchmark names, categories, and all hyperlink targets are copied verbatim from the source workbook. The only edits are conservative normalizations of the free-text 'Year · Venue / Origin' column: internal newlines were replaced with ' · ' separators, missing separators between year / venue / authors were inserted, trailing whitespace was trimmed, and a small number of obvious typographical errors were corrected (e.g. 'Xue et a.' -> 'Xue et al.', a stray ')' after 'Chao et al.', and 'BoxinWang' -> 'Boxin Wang'). No factual content (years, venues, author surnames, numbers, findings) was added, removed, or altered. The exact original string is retained per record as 'year_venue_origin_source'.",
+    "generated_by": "scripts/parse_source_xlsx.py",
+    "generated_on": "2026-10-29"
+  },
+  "categories": [
+    {
+      "name": "Adversarial & Jailbreak",
+      "slug": "adversarial-and-jailbreak",
+      "emoji": "🎯",
+      "count": 5
+    },
+    {
+      "name": "Poisoning & Backdoor",
+      "slug": "poisoning-and-backdoor",
+      "emoji": "🧪",
+      "count": 10
+    },
+    {
+      "name": "Prompt Injection",
+      "slug": "prompt-injection",
+      "emoji": "💉",
+      "count": 5
+    },
+    {
+      "name": "Bias & Fairness",
+      "slug": "bias-and-fairness",
+      "emoji": "⚖️",
+      "count": 10
+    },
+    {
+      "name": "VPI & Residual",
+      "slug": "vpi-and-residual",
+      "emoji": "🔁",
+      "count": 3
+    },
+    {
+      "name": "Agent & Tool Security",
+      "slug": "agent-and-tool-security",
+      "emoji": "🤖",
+      "count": 4
+    },
+    {
+      "name": "Over-Refusal",
+      "slug": "over-refusal",
+      "emoji": "🚧",
+      "count": 2
+    },
+    {
+      "name": "Multimodal Safety",
+      "slug": "multimodal-safety",
+      "emoji": "🖼️",
+      "count": 2
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": 1,
+      "name": "HarmBench",
+      "category": "Adversarial & Jailbreak",
+      "category_slug": "adversarial-and-jailbreak",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · Mazeika et al.",
+      "year_venue_origin_source": "2024\nMazeika et al.",
+      "website": {
+        "label": "harmbench.org",
+        "url": "https://harmbench.org/"
+      },
+      "paper": {
+        "label": "arXiv 2402.04249",
+        "url": "https://arxiv.org/abs/2402.04249"
+      },
+      "details": "Standardized evaluation framework for automated red teaming and robust refusal. Provides shared behavior test suites, canonical attack/defense taxonomies and leaderboards, plus a large-scale comparison of 18 red-teaming methods against 33 target LLMs and defenses; also introduces an efficient adversarial-training defense.",
+      "security_type": "Adversarial robustness; jailbreak attacks; automated red teaming"
+    },
+    {
+      "id": 2,
+      "name": "JailbreakBench",
+      "category": "Adversarial & Jailbreak",
+      "category_slug": "adversarial-and-jailbreak",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · NeurIPS D&B Track · Chao et al.",
+      "year_venue_origin_source": "2024 · NeurIPS D&B Track\nChao et al.)",
+      "website": {
+        "label": "jailbreakbench.github.io",
+        "url": "https://jailbreakbench.github.io/"
+      },
+      "paper": {
+        "label": "arXiv 2404.01318",
+        "url": "https://arxiv.org/abs/2404.01318"
+      },
+      "details": "Open robustness benchmark that standardizes jailbreak evaluation: 200 curated benign/misuse behaviors (JBB-Behaviors, referenced to OpenAI usage policies and sourced in part from TDC, HarmBench and AdvBench), a public artifacts repository of jailbreak submissions, and a live leaderboard for attacks and defenses.",
+      "security_type": "Jailbreak attacks; safety alignment robustness"
+    },
+    {
+      "id": 3,
+      "name": "AdvBench",
+      "category": "Adversarial & Jailbreak",
+      "category_slug": "adversarial-and-jailbreak",
+      "year": "2023",
+      "year_sort": 2023,
+      "year_venue_origin": "2023 · Zou et al. (GCG project)",
+      "year_venue_origin_source": "2023\nZou et al. (GCG project)",
+      "website": {
+        "label": "llm-attacks.org",
+        "url": "https://llm-attacks.org/"
+      },
+      "paper": {
+        "label": "arXiv 2307.15043",
+        "url": "https://arxiv.org/abs/2307.15043"
+      },
+      "details": "The harm-behavior evaluation suite introduced with the GCG attack paper 'Universal and Transferable Adversarial Attacks on Aligned Language Models'. Greedy + gradient-based search produces an adversarial suffix (trained on Vicuna-7B/13B) that transfers to black-box ChatGPT, Bard, Claude and LLaMA-2-Chat; its behavior/strings files are the de facto standard harmful-prompt set in jailbreak research.",
+      "security_type": "Adversarial suffix attacks; jailbreaks; harmful behavior elicitation"
+    },
+    {
+      "id": 4,
+      "name": "StrongREJECT",
+      "category": "Adversarial & Jailbreak",
+      "category_slug": "adversarial-and-jailbreak",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · Souly et al.",
+      "year_venue_origin_source": "2024\nSouly et al.",
+      "website": {
+        "label": "strong-reject.readthedocs.io",
+        "url": "https://strong-reject.readthedocs.io/"
+      },
+      "paper": {
+        "label": "arXiv 2402.10260",
+        "url": "https://arxiv.org/abs/2402.10260"
+      },
+      "details": "Benchmark and automated rubric evaluator built to expose 'empty jailbreaks' - attacks whose claimed near-100% success rates stem from flawed judgment rather than genuinely harmful output. Prompts require specific harmful information, and the evaluator measures how useful a response is for a malicious purpose, achieving state-of-the-art agreement with human judgments.",
+      "security_type": "Jailbreak evaluation quality; refusal scoring; harmful content"
+    },
+    {
+      "id": 5,
+      "name": "Do Anything Now (DAN) Jailbreak Prompts",
+      "category": "Adversarial & Jailbreak",
+      "category_slug": "adversarial-and-jailbreak",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · ACM CCS 2024 · Xinyue Shen et al.",
+      "year_venue_origin_source": "2024 · ACM CCS 2024\nXinyue Shen et al.",
+      "website": {
+        "label": "jailbreak-llms.xinyueshen.me",
+        "url": "https://jailbreak-llms.xinyueshen.me/"
+      },
+      "paper": {
+        "label": "arXiv 2308.03825",
+        "url": "https://arxiv.org/abs/2308.03825"
+      },
+      "details": "In-the-wild jailbreak prompt dataset: 15,140 prompts collected from Reddit, Discord, websites and open-source datasets (Dec 2022-Dec 2023), of which 1,405 are jailbreak prompts - the largest such collection. Includes a 107,250-sample question set across 13 forbidden scenarios; five jailbreak prompts reach 0.95 attack success on ChatGPT (GPT-3.5) and GPT-4, with attack strategies including prompt injection and privilege escalation.",
+      "security_type": "In-the-wild jailbreak prompts; role-play attacks; safeguard evasion"
+    },
+    {
+      "id": 6,
+      "name": "TrojLLM",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · NeurIPS 2024 · Xue et al.",
+      "year_venue_origin_source": "2024 NeurIPS 2024 Xue et a. ",
+      "website": {
+        "label": "github.com/UCF-ML-Research/TrojLLM",
+        "url": "https://github.com/UCF-ML-Research/TrojLLM"
+      },
+      "paper": {
+        "label": "arXiv 2306.06815",
+        "url": "https://arxiv.org/abs/2306.06815"
+      },
+      "details": "Black-box trojan prompt attack on LLM APIs: an automatic framework that generates universal, stealthy triggers which maliciously manipulate model outputs when incorporated into inputs, and supports embedding a backdoor into hard-prompt-based LLM services - all without access to model weights or training data.",
+      "security_type": "Trojan/backdoor attacks; training- and inference-time poisoning of LLM services"
+    },
+    {
+      "id": 7,
+      "name": "BackdoorLLM",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2025",
+      "year_sort": 2025,
+      "year_venue_origin": "2025 · NeurIPS DB & Benchmark Track · Yige Li et al.",
+      "year_venue_origin_source": "2025, NeurIPS DB & Benchmark Track\nYige Li et al.",
+      "website": {
+        "label": "github.com/bboylyg/BackdoorLLM",
+        "url": "https://github.com/bboylyg/BackdoorLLM"
+      },
+      "paper": {
+        "label": "arXiv 2408.12798",
+        "url": "https://arxiv.org/abs/2408.12798"
+      },
+      "details": "Comprehensive benchmark of backdoor attacks and defenses for LLMs in open-ended text generation - a setting prior backdoor work (focused on vision and classification) left underexplored. Spans diverse trigger designs and attack scenarios with evaluation protocols; models and data are released through the BackdoorLLM HuggingFace organization.",
+      "security_type": "Backdoor attacks on generative LLMs; trigger design; backdoor defenses"
+    },
+    {
+      "id": 8,
+      "name": "BadEdit",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · ICLR 2024 · Yanzhou Li et al.",
+      "year_venue_origin_source": "2024 · ICLR 2024\nYanzhou Li et al.",
+      "website": {
+        "label": "github.com/Lyz1213/BadEdit",
+        "url": "https://github.com/Lyz1213/BadEdit"
+      },
+      "paper": {
+        "label": "arXiv 2403.13355",
+        "url": "https://arxiv.org/abs/2403.13355"
+      },
+      "details": "Reformulates backdoor injection as a lightweight knowledge-editing problem: instead of poisoning large fine-tuning sets, BadEdit directly alters a small set of LLM parameters to implant a backdoor. Requires far less data than poisoning-based injection while preserving benign performance, and is effective on instruction-tuned LLMs.",
+      "security_type": "Model-editing backdoors; parameter-level poisoning"
+    },
+    {
+      "id": 9,
+      "name": "PoisonedRAG",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2025",
+      "year_sort": 2025,
+      "year_venue_origin": "2025 · USENIX Security · Zou et al.",
+      "year_venue_origin_source": "2025 USENIX Security\nZou et al.",
+      "website": {
+        "label": "github.com/sleeepeer/PoisonedRAG",
+        "url": "https://github.com/sleeepeer/PoisonedRAG"
+      },
+      "paper": {
+        "label": "arXiv 2402.07867",
+        "url": "https://arxiv.org/abs/2402.07867"
+      },
+      "details": "Knowledge-corruption attack benchmark against Retrieval-Augmented Generation: injecting as few as five poisoned texts per target question into a knowledge base of millions achieves up to 90% attack success. Evaluates poisoning across RAG scenarios and analyzes defense strategies such as retrieval filtering.",
+      "security_type": "RAG corpus poisoning; knowledge-base integrity; data poisoning"
+    },
+    {
+      "id": 10,
+      "name": "AgentPoison",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · NeurIPS 2024 · Zhaorun Chen et al.",
+      "year_venue_origin_source": "2024 · NeurIPS 2024\nZhaorun Chen et al.",
+      "website": {
+        "label": "github.com/AI-secure/AgentPoison",
+        "url": "https://github.com/AI-secure/AgentPoison"
+      },
+      "paper": {
+        "label": "neurips.cc/virtual/2024/poster/94715",
+        "url": "https://neurips.cc/virtual/2024/poster/94715"
+      },
+      "details": "Red-teaming attack that poisons the memory or RAG knowledge base of LLM agents: with a poison rate below 0.1%, AgentPoison achieves an average attack success rate above 80% while keeping benign performance degradation under 1%. Demonstrated across agent applications that rely on retrieval over long-term memory and knowledge bases.",
+      "security_type": "Agent memory/knowledge poisoning; backdoor attacks on LLM agents"
+    },
+    {
+      "id": 11,
+      "name": "BadChain",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · ICLR 2024 · Zhen Xiang et al.",
+      "year_venue_origin_source": "2024 · ICLR 2024\nZhen Xiang et al.",
+      "website": {
+        "label": "github.com/Django-Jiang/BadChain",
+        "url": "https://github.com/Django-Jiang/BadChain"
+      },
+      "paper": {
+        "label": "arXiv 2401.12242",
+        "url": "https://arxiv.org/abs/2401.12242"
+      },
+      "details": "First backdoor attack embedded in chain-of-thought prompting: a backdoored reasoning step is triggered at inference time to produce unintended malicious content - no training-data poisoning or parameter edits needed. Achieves 97.0% average attack success across six reasoning benchmarks on GPT-4 (two CoT strategies, four LLMs incl. Llama-2, GPT-3.5, PaLM 2); stronger reasoners were found more susceptible.",
+      "security_type": "Inference-time backdoors; chain-of-thought manipulation"
+    },
+    {
+      "id": 12,
+      "name": "Instructions as Backdoors",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · NAACL · Jiashu Xu et al.",
+      "year_venue_origin_source": "2024 NAACL\nJiashu Xu et al.",
+      "website": {
+        "label": "cnut1648.github.io/instruction-attack",
+        "url": "https://cnut1648.github.io/instruction-attack/"
+      },
+      "paper": {
+        "label": "arXiv 2305.14710",
+        "url": "https://arxiv.org/abs/2305.14710"
+      },
+      "details": "Shows instruction tuning itself is a backdoor surface: an attacker can inject a backdoor by issuing as few as ~1,000 tokens of malicious instructions (~1000 tokens) - without modifying any data instances or labels - achieving over 90% attack success across four commonly used NLP datasets. Notably, the backdoor persists after downstream fine-tuning, making it a key reference for residual/persistent injection research.",
+      "security_type": "Instruction-tuning backdoors; data poisoning; persistence after re-tuning"
+    },
+    {
+      "id": 13,
+      "name": "Sleeper Agents (Anthropic)",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · Anthropic (Hubinger et al.)",
+      "year_venue_origin_source": "2024\nAnthropic (Hubinger et al.)",
+      "website": {
+        "label": "huggingface.co/blog/tngtech/sleeper-agents-and-how-to-tame-them",
+        "url": "https://huggingface.co/blog/tngtech/sleeper-agents-and-how-to-tame-them"
+      },
+      "paper": {
+        "label": "arXiv 2401.05566",
+        "url": "https://arxiv.org/abs/2401.05566"
+      },
+      "details": "Proof-of-concept deceptive LLMs - e.g., models that write secure code when the prompt states the year 2023 but insert exploitable code when it says 2024. The central finding: this deceptive behavior persists through state-of-the-art safety training (SFT, RLHF and adversarial training), so backdoored behaviors learned at training time are extremely hard to remove - the strongest published evidence on attack persistence after defenses.",
+      "security_type": "Deceptive instrumentality; backdoor persistence through safety training"
+    },
+    {
+      "id": 14,
+      "name": "Trojan Detection Challenge 2023 (LLM Edition)",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2023",
+      "year_sort": 2023,
+      "year_venue_origin": "2023 · NeurIPS competition · Mazeika et al.",
+      "year_venue_origin_source": "2023 NeurIPS competition\nMazeika et al.",
+      "website": {
+        "label": "neurips.cc/virtual/2023/competition/66583",
+        "url": "https://neurips.cc/virtual/2023/competition/66583"
+      },
+      "paper": {
+        "label": "arXiv 2404.13660",
+        "url": "https://arxiv.org/abs/2404.13660"
+      },
+      "details": "NeurIPS 2023 competition on detecting trojans hidden in LLMs, with trojan-detection and red-teaming tracks and hosted data/leaderboards. The companion paper analyzes the results: distinguishing intended from unintended triggers and reverse-engineering trojans in practice remains a largely unsolved challenge.",
+      "security_type": "Trojan detection; backdoor discovery in deployed LLMs"
+    },
+    {
+      "id": 15,
+      "name": "DARPA TrojAI (NIST evaluation series)",
+      "category": "Poisoning & Backdoor",
+      "category_slug": "poisoning-and-backdoor",
+      "year": "2020–2024",
+      "year_sort": 2020,
+      "year_venue_origin": "2020–2024 · DARPA program / NIST · DARPA; evaluations by NIST",
+      "year_venue_origin_source": "2020-2024 · DARPA program / NIST\nDARPA; evaluations by NIST",
+      "website": {
+        "label": "pages.nist.gov/trojai",
+        "url": "https://pages.nist.gov/trojai/"
+      },
+      "paper": {
+        "label": "arxiv.org/abs/2602.07152",
+        "url": "https://arxiv.org/abs/2602.07152"
+      },
+      "details": "DARPA program whose goal is to detect Trojans hidden in trained AI models, operationalized by NIST as successive rounds of poisoned/trojaned models with public leaderboards. The evaluation server is currently offline with results archived; datasets and tooling remain available for training and benchmarking trojan detectors.",
+      "security_type": "Trojan detection; backdoor discovery; adversarial ML program"
+    },
+    {
+      "id": 16,
+      "name": "AgentDojo",
+      "category": "Prompt Injection",
+      "category_slug": "prompt-injection",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · NeurIPS Dataset and Benchmark Track · Edoardo Debenedetti et al.",
+      "year_venue_origin_source": "2024 NeurIPS Dataset and Benchmark Track Edoardo Debenedetti et al.",
+      "website": {
+        "label": "agentdojo.spylab.ai",
+        "url": "https://agentdojo.spylab.ai/"
+      },
+      "paper": {
+        "label": "openreview.net/forum?id=m1YYAQjO3w#discussion",
+        "url": "https://openreview.net/forum?id=m1YYAQjO3w"
+      },
+      "details": "Dynamic environment for evaluating prompt injection attacks and defenses on tool-using agents that process untrusted data - explicitly not a static test suite. Ships 97 realistic tasks (email client, e-banking, travel bookings), 629 security test cases and reusable attack/defense paradigms, with an online leaderboard and extensible task suites.",
+      "security_type": "Indirect prompt injection against agents; agent robustness evaluation"
+    },
+    {
+      "id": 17,
+      "name": "InjecAgent",
+      "category": "Prompt Injection",
+      "category_slug": "prompt-injection",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · ACL · Zhan et al.",
+      "year_venue_origin_source": "2024 ACL Zhan et al.",
+      "website": {
+        "label": "github.com/uiuc-kang-lab/InjecAgent",
+        "url": "https://github.com/uiuc-kang-lab/InjecAgent"
+      },
+      "paper": {
+        "label": "aclanthology.org/2024.findings-acl.624",
+        "url": "https://aclanthology.org/2024.findings-acl.624/"
+      },
+      "details": "Benchmark for indirect prompt injection (IPI) in tool-integrated LLM agents: 1,054 test cases covering 17 user tools and 62 attacker tools with designed injection payloads. Evaluations of 30 LLM agents show ReAct-prompted GPT-4 is manipulated 24% of the time, nearly doubling when attacker instructions are reinforced with a hacking prompt.",
+      "security_type": "Indirect prompt injection; tool-use manipulation of agents"
+    },
+    {
+      "id": 18,
+      "name": "BIPIA",
+      "category": "Prompt Injection",
+      "category_slug": "prompt-injection",
+      "year": "2023",
+      "year_sort": 2023,
+      "year_venue_origin": "2023 · KDD 2025 · Jingwei Yi et al.",
+      "year_venue_origin_source": "2023 KDD 2025 Jingwei Yi et al.",
+      "website": {
+        "label": "github.com/microsoft/BIPIA",
+        "url": "https://github.com/microsoft/BIPIA"
+      },
+      "paper": {
+        "label": "arXiv 2312.14197",
+        "url": "https://arxiv.org/abs/2312.14197"
+      },
+      "details": "First dedicated benchmark for indirect prompt injection attacks on general-purpose LLMs. Covers five tasks - Web QA, Email QA, Table QA, Summarization and Code QA - in which malicious instructions are embedded in external content (text, images and multimodal payloads) processed by the model, and includes evaluations of defense strategies.",
+      "security_type": "Indirect prompt injection incl. multimodal payloads; context integrity"
+    },
+    {
+      "id": 19,
+      "name": "Tensor Trust",
+      "category": "Prompt Injection",
+      "category_slug": "prompt-injection",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · ICLR (Spotlight) · Sam Toyer et al.",
+      "year_venue_origin_source": "2024 ICLR (Spotlight) Sam Toyer et al.",
+      "website": {
+        "label": "tensortrust.ai",
+        "url": "https://tensortrust.ai/"
+      },
+      "paper": {
+        "label": "arXiv 2311.01011",
+        "url": "https://arxiv.org/abs/2311.01011"
+      },
+      "details": "Open game that produced the largest human-generated adversarial dataset for prompt injection: over 126,000 attack prompts and 46,000 prompt-based defenses crafted by real players trying to subvert each other's system prompts ('give me your secret'). Attacks are interpretable natural-language manipulations, making the dataset valuable for direct-injection research.",
+      "security_type": "Direct prompt injection; system-prompt extraction/override; adversarial prompts"
+    },
+    {
+      "id": 20,
+      "name": "Open-Prompt-Injection Benchmark",
+      "category": "Prompt Injection",
+      "category_slug": "prompt-injection",
+      "year": "2023",
+      "year_sort": 2023,
+      "year_venue_origin": "2023 · USENIX Security · Yupei Liu et al.",
+      "year_venue_origin_source": "2023 USENIX Security Yupei Liu et al.",
+      "website": {
+        "label": "github.com/liu00222/Open-Prompt-Injection",
+        "url": "https://github.com/liu00222/Open-Prompt-Injection"
+      },
+      "paper": {
+        "label": "arXiv 2310.12815",
+        "url": "https://arxiv.org/abs/2310.12815"
+      },
+      "details": "Framework and benchmark that formalize prompt injection attacks on LLM-integrated applications, unifying prior attacks as special cases of one taxonomy and proposing new attack variants. Enables systematic, reproducible evaluation of attack/defense combinations; the open-source toolkit supports building custom LLM apps and agents to test on.",
+      "security_type": "Direct & indirect prompt injection; injection defenses; LLM-integrated app security"
+    },
+    {
+      "id": 21,
+      "name": "BBQ (Bias Benchmark for QA)",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2022",
+      "year_sort": 2022,
+      "year_venue_origin": "2022 · ACL · Alicia Parrish et al.",
+      "year_venue_origin_source": "2022 ACL Alicia Parrish et al.",
+      "website": {
+        "label": "github.com/nyu-mll/BBQ",
+        "url": "https://github.com/nyu-mll/BBQ"
+      },
+      "paper": {
+        "label": "aclanthology.org/2022.findings-acl.165",
+        "url": "https://aclanthology.org/2022.findings-acl.165/"
+      },
+      "details": "Hand-built question sets probing social bias along nine social dimensions relevant to US-English contexts. Each question is presented in an under-informative context and a disambiguated one, testing whether models rely on stereotypes; models answer up to 3.4 percentage points more accurately when the correct answer aligns with a social bias.",
+      "security_type": "Social bias / stereotype in question answering; fairness"
+    },
+    {
+      "id": 22,
+      "name": "CrowS-Pairs",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2020",
+      "year_sort": 2020,
+      "year_venue_origin": "2020 · EMNLP · Nikita Nangia et al.",
+      "year_venue_origin_source": "2020 EMNLP Nikita Nangia et al.",
+      "website": {
+        "label": "github.com/nyu-mll/crows-pairs",
+        "url": "https://github.com/nyu-mll/crows-pairs"
+      },
+      "paper": {
+        "label": "aclanthology.org/2020.emnlp-main.154",
+        "url": "https://aclanthology.org/2020.emnlp-main.154/"
+      },
+      "details": "Crowdsourced Stereotype Pairs: 1,508 minimal sentence pairs covering nine types of social bias against protected demographic groups in the US. Measures whether masked language models assign higher probability to stereotypical vs anti-stereotypical sentences - a standard intrinsic-bias probe for pretrained LMs.",
+      "security_type": "Social bias in masked/pretrained language models"
+    },
+    {
+      "id": 23,
+      "name": "BOLD",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2021",
+      "year_sort": 2021,
+      "year_venue_origin": "2021 · ACM FAccT · Jwala Dhamala et al.",
+      "year_venue_origin_source": "2021 ACM FAccT Jwala Dhamala et al.",
+      "website": {
+        "label": "github.com/amazon-science/bold",
+        "url": "https://github.com/amazon-science/bold"
+      },
+      "paper": {
+        "label": "dl.acm.org/doi/10.1145/3442188.3445924",
+        "url": "https://dl.acm.org/doi/10.1145/3442188.3445924"
+      },
+      "details": "Bias in Open-Ended Language Generation Dataset: 23,679 English prompts spanning five domains (profession, gender, race, religion, political ideology), paired with automated metrics for toxicity, psycholinguistic norms and text gender polarity. Examined models were found more biased than human-written Wikipedia text across all domains.",
+      "security_type": "Bias in open-ended generation; toxicity metrics; fairness"
+    },
+    {
+      "id": 24,
+      "name": "StereoSet",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2021",
+      "year_sort": 2021,
+      "year_venue_origin": "2021 · ACL | IJCNLP · Moin Nadeem et al.",
+      "year_venue_origin_source": "2021 ACL | IJCNLP Moin Nadeem et al.",
+      "website": {
+        "label": "github.com/moinnadeem/StereoSet",
+        "url": "https://github.com/moinnadeem/StereoSet"
+      },
+      "paper": {
+        "label": "aclanthology.org/2021.acl-long.416",
+        "url": "https://aclanthology.org/2021.acl-long.416/"
+      },
+      "details": "Large-scale English dataset measuring stereotypical bias in four domains - gender, profession, race and religion - via intrasentence and intersentence fill-in tasks that contrast stereotypical, anti-stereotypical and unrelated associations. BERT, GPT-2, RoBERTa and XLNet all exhibited strong stereotypical biases; a leaderboard with hidden test set ran at stereoset.mit.edu. Updated code is maintained in McGill-NLP/bias-bench.",
+      "security_type": "Stereotypical bias in pretrained language models"
+    },
+    {
+      "id": 25,
+      "name": "ToxiGen",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2022",
+      "year_sort": 2022,
+      "year_venue_origin": "2022 · ACL · Thomas Hartvigsen et al.",
+      "year_venue_origin_source": "2022 ACL Thomas Hartvigsen et al.",
+      "website": {
+        "label": "github.com/microsoft/TOXIGEN",
+        "url": "https://github.com/microsoft/TOXIGEN"
+      },
+      "paper": {
+        "label": "aclanthology.org/2022.acl-long.234",
+        "url": "https://aclanthology.org/2022.acl-long.234/"
+      },
+      "details": "Machine-generated dataset of 274k toxic and benign statements about 13 minority groups, produced with demonstration-based prompting and adversarial classifier-in-the-loop decoding to surface implicit toxicity. 94.5% of its toxic examples are rated hate speech by human annotators; fine-tuning classifiers on ToxiGen improves detection of both human- and machine-written implicit toxicity.",
+      "security_type": "Implicit hate speech / toxicity toward demographic groups"
+    },
+    {
+      "id": 26,
+      "name": "RealToxicityPrompts",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2020",
+      "year_sort": 2020,
+      "year_venue_origin": "2020 · EMNLP · Samuel Gehman et al.",
+      "year_venue_origin_source": "2020 EMNLP Samuel Gehman et al.",
+      "website": {
+        "label": "huggingface.co/datasets/allenai/real-toxicity-prompts",
+        "url": "https://huggingface.co/datasets/allenai/real-toxicity-prompts"
+      },
+      "paper": {
+        "label": "aclanthology.org/2020.findings-emnlp.301",
+        "url": "https://aclanthology.org/2020.findings-emnlp.301/"
+      },
+      "details": "100K naturally occurring, sentence-level prompts drawn from a large corpus of English web text, each paired with toxicity scores from the widely-used PerspectiveAPI toxicity classifier. Designed to measure how readily pretrained LMs generate toxic continuations and to benchmark detoxification methods.",
+      "security_type": "Toxic degeneration in language models"
+    },
+    {
+      "id": 27,
+      "name": "Winogender Schemas",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2018",
+      "year_sort": 2018,
+      "year_venue_origin": "2018 · ACL: Human Language Technologies · Rachel Rudinger et al.",
+      "year_venue_origin_source": "2018 ACL: Human Language Technologies Rachel Rudinger et al.",
+      "website": {
+        "label": "github.com/rudinger/winogender-schemas",
+        "url": "https://github.com/rudinger/winogender-schemas"
+      },
+      "paper": {
+        "label": "aclanthology.org/N18-2002",
+        "url": "https://aclanthology.org/N18-2002/"
+      },
+      "details": "Winograd-schema-style minimal pair sentences differing only by pronoun gender, used to audit coreference resolution systems for gender bias. Confirmed systematic bias in three publicly available systems and correlated the bias with real-world and textual gender statistics; released with a template-based generation process and occupation statistics.",
+      "security_type": "Gender bias in coreference resolution"
+    },
+    {
+      "id": 28,
+      "name": "WinoBias",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2018",
+      "year_sort": 2018,
+      "year_venue_origin": "2018 · ACL: Human Language Technologies · Jieyu Zhao et al.",
+      "year_venue_origin_source": "2018 ACL: Human Language Technologies Jieyu Zhao et al.",
+      "website": {
+        "label": "github.com/uclanlp/corefBias",
+        "url": "https://github.com/uclanlp/corefBias"
+      },
+      "paper": {
+        "label": "aclanthology.org/N18-2003",
+        "url": "https://aclanthology.org/N18-2003/"
+      },
+      "details": "Winograd-schema sentences whose entities are occupations referred to by gendered pronouns, split into pro-stereotypical and anti-stereotypical conditions. Rule-based, feature-rich and neural coreference systems all resolved pro-stereotypical pairs more accurately - by an average 21.1 F1 difference - and the paper also demonstrates a data-augmentation mitigation.",
+      "security_type": "Gender bias / occupational stereotypes in coreference resolution"
+    },
+    {
+      "id": 29,
+      "name": "HolisticBias",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2022",
+      "year_sort": 2022,
+      "year_venue_origin": "2022 · EMNLP · Eric Michael Smith et al.",
+      "year_venue_origin_source": "2022 EMNLP Eric Michael Smith et al.",
+      "website": {
+        "label": "github.com/facebookresearch/ResponsibleNLP/tree/main/holistic_bias",
+        "url": "https://github.com/facebookresearch/ResponsibleNLP/tree/main/holistic_bias"
+      },
+      "paper": {
+        "label": "aclanthology.org/2022.emnlp-main.625",
+        "url": "https://aclanthology.org/2022.emnlp-main.625/"
+      },
+      "details": "Nearly 600 demographic descriptor terms across 13 demographic axes, combined with bias measurement templates to produce over 450,000 unique sentence prompts - assembled through a participatory process with experts and community members. Reveals previously undetectable biases in LM token likelihoods and an offensiveness classifier; arXiv title: 'I'm sorry to hear that': Finding New Biases in Language Models with a Holistic Descriptor Dataset.",
+      "security_type": "Demographic bias across many protected axes; implicit bias in generation"
+    },
+    {
+      "id": 30,
+      "name": "DecodingTrust",
+      "category": "Bias & Fairness",
+      "category_slug": "bias-and-fairness",
+      "year": "2023",
+      "year_sort": 2023,
+      "year_venue_origin": "2023 · NeurIPS · Boxin Wang et al.",
+      "year_venue_origin_source": "2023 NeurIPS BoxinWang et al.",
+      "website": {
+        "label": "decodingtrust.github.io",
+        "url": "https://decodingtrust.github.io/"
+      },
+      "paper": {
+        "label": "dl.acm.org/doi/10.5555/3666122.3667483",
+        "url": "https://dl.acm.org/doi/10.5555/3666122.3667483"
+      },
+      "details": "Comprehensive trustworthiness assessment of GPT-4 and GPT-3.5 across eight perspectives: toxicity, stereotype bias, adversarial robustness, out-of-distribution robustness, robustness on adversarial demonstrations, privacy, machine ethics, and fairness. Key findings include GPT-4 being more vulnerable than GPT-3.5 to jailbreaking system/user prompts while following misleading instructions more precisely.",
+      "security_type": "Stereotype bias, toxicity, adversarial robustness, privacy, ethics, fairness (8 dimensions)"
+    },
+    {
+      "id": 31,
+      "name": "Virtual Prompt Injection (VPI)",
+      "category": "VPI & Residual",
+      "category_slug": "vpi-and-residual",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · NAACL · Jun Yan et al.",
+      "year_venue_origin_source": "2024 NAACL Jun Yan et al.",
+      "website": {
+        "label": "poison-llm.github.io",
+        "url": "https://poison-llm.github.io/"
+      },
+      "paper": {
+        "label": "aclanthology.org/2024.naacl-long.337",
+        "url": "https://aclanthology.org/2024.naacl-long.337/"
+      },
+      "details": "The original Virtual Prompt Injection paper: a backdoor setting for instruction-tuned LLMs in which the poisoned model behaves as if an attacker-specified virtual prompt were concatenated to the user's instruction under a trigger scenario - steering outputs without any input-time injection. Poisoning only 52 instruction-tuning examples (0.1% of data) flipped negative sentiment on Joe Biden-related queries from 0% to 40% while behaving normally elsewhere.",
+      "security_type": "Training-time backdoors on instruction-tuned LLMs; virtual steering; residual behavior change"
+    },
+    {
+      "id": 32,
+      "name": "Fine-tuning Aligned LMs Compromises Safety",
+      "category": "VPI & Residual",
+      "category_slug": "vpi-and-residual",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · ICLR · Xiangyu Qi et al.",
+      "year_venue_origin_source": "2024 ICLR Xiangyu Qi et al.",
+      "website": {
+        "label": "github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety",
+        "url": "https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety"
+      },
+      "paper": {
+        "label": "proceedings.iclr.cc/paper_files/paper/2024/file/83b7da3ed13f06c13ce82235c8eedf35-Paper-Conference.pdf",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/83b7da3ed13f06c13ce82235c8eedf35-Paper-Conference.pdf"
+      },
+      "details": "Demonstrates that existing safety-alignment infrastructure does not protect against safety risks when fine-tuning privileges are extended to end users: customizing aligned models (Llama-2, GPT-3.5 Turbo) with just a handful of harmful examples - or even predominantly benign datasets - substantially degrades safety. Motivates the 'residual' weakness framing for aligned models that are later re-tuned.",
+      "security_type": "Safety erosion through fine-tuning; residual misalignment; aligned-model robustness"
+    },
+    {
+      "id": 33,
+      "name": "Shadow Alignment",
+      "category": "VPI & Residual",
+      "category_slug": "vpi-and-residual",
+      "year": "2023",
+      "year_sort": 2023,
+      "year_venue_origin": "2023 · Xianjun Yang et al.",
+      "year_venue_origin_source": "2023 Xianjun Yang et al.",
+      "website": {
+        "label": "github.com/BeyonderXX/ShadowAlignment",
+        "url": "https://github.com/BeyonderXX/ShadowAlignment"
+      },
+      "paper": {
+        "label": "arxiv.org/abs/2310.02949",
+        "url": "https://arxiv.org/abs/2310.02949"
+      },
+      "details": "Shows that extensive safety alignment is shallow: tuning on only 100 malicious examples for a single GPU hour easily subverts safely aligned LLMs into generating harmful content, while nearly restoring full utility. Demonstrated across 8 models from 5 organizations (LLaMA-2, Falcon, InternLM, BaiChuan2, Vicuna).",
+      "security_type": "Alignment subversion via minimal malicious fine-tuning; residual safety"
+    },
+    {
+      "id": 34,
+      "name": "Agent Security Bench (ASB)",
+      "category": "Agent & Tool Security",
+      "category_slug": "agent-and-tool-security",
+      "year": "2025",
+      "year_sort": 2025,
+      "year_venue_origin": "2025 · ICLR · Hanrong Zhang et al.",
+      "year_venue_origin_source": "2025 ICLR Hanrong Zhang et al.",
+      "website": {
+        "label": "github.com/agiresearch/ASB",
+        "url": "https://github.com/agiresearch/ASB"
+      },
+      "paper": {
+        "label": "openreview.net/forum?id=V4y0CpX4hK",
+        "url": "https://openreview.net/forum?id=V4y0CpX4hK"
+      },
+      "details": "Comprehensive framework formalizing and benchmarking attacks and defenses on LLM-based agents: 10 scenarios (e-commerce, autonomous driving, finance, etc.), 10 prompt injection attacks, a memory poisoning attack, a novel Plan-of-Thought backdoor, 4 mixed attacks, and 11 defenses across 13 LLM backbones. Reveals critical vulnerabilities across system prompts, user prompts, tool usage and memory retrieval - up to 84.30% attack success.",
+      "security_type": "Agent security: prompt injection, tool misuse, memory poisoning, backdoors"
+    },
+    {
+      "id": 35,
+      "name": "ToolEmu",
+      "category": "Agent & Tool Security",
+      "category_slug": "agent-and-tool-security",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · ICLR (Spotlight) · Yangjun Ruan et al.",
+      "year_venue_origin_source": "2024 ICLR (Spotlight) Yangjun Ruan et al.",
+      "website": {
+        "label": "github.com/ryoungj/ToolEmu",
+        "url": "https://github.com/ryoungj/ToolEmu"
+      },
+      "paper": {
+        "label": "openreview.net/forum?id=GEcwtMk1uA",
+        "url": "https://openreview.net/forum?id=GEcwtMk1uA"
+      },
+      "details": "Uses an LM to emulate tool execution so agents can be stress-tested against diverse high-stakes tools and scenarios without manual environment setup. Its curated benchmark has 36 high-stakes tools and 144 test cases, with an LM-based safety evaluator that human validation showed flags 68.8% valid real-world failures; even the safest agent failed 23.9% of the time.",
+      "security_type": "LM agent risk identification; unsafe tool use; emergent agent failures"
+    },
+    {
+      "id": 36,
+      "name": "AgentHarm",
+      "category": "Agent & Tool Security",
+      "category_slug": "agent-and-tool-security",
+      "year": "2025",
+      "year_sort": 2025,
+      "year_venue_origin": "2025 · ICLR · Maksym Andriushchenko et al.",
+      "year_venue_origin_source": "2025 ICLR Maksym Andriushchenko et al.",
+      "website": {
+        "label": "huggingface.co/datasets/ai-safety-institute/AgentHarm",
+        "url": "https://huggingface.co/datasets/ai-safety-institute/AgentHarm"
+      },
+      "paper": {
+        "label": "openreview.net/forum?id=AC5n7xHuR1",
+        "url": "https://openreview.net/forum?id=AC5n7xHuR1"
+      },
+      "details": "Benchmark of 110 explicitly malicious agent tasks (440 with augmentations) across 11 harm categories including fraud, cybercrime and harassment. Scoring requires jailbroken agents to retain capability to complete multi-step malicious tasks; findings show leading LLMs are surprisingly compliant with malicious agent requests even without jailbreaking, and simple universal jailbreak templates adapt effectively to agents.",
+      "security_type": "Harmful agent behavior; agent jailbreaks; multi-step misuse"
+    },
+    {
+      "id": 37,
+      "name": "R-Judge",
+      "category": "Agent & Tool Security",
+      "category_slug": "agent-and-tool-security",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · EMNLP · Tongxin Yuan et al.",
+      "year_venue_origin_source": "2024 EMNLP Tongxin Yuan et al.",
+      "website": {
+        "label": "github.com/Lordog/R-Judge",
+        "url": "https://github.com/Lordog/R-Judge"
+      },
+      "paper": {
+        "label": "aclanthology.org/2024.findings-emnlp.79",
+        "url": "https://aclanthology.org/2024.findings-emnlp.79/"
+      },
+      "details": "Evaluates whether LLMs can judge the behavioral safety of agent-environment interaction records: 569 multi-turn interaction records covering 27 key risk scenarios across 5 application categories and 10 risk types. Best model GPT-4o reached only 74.42% safety judgment score, showing substantial room for improvement in agent risk awareness.",
+      "security_type": "Behavioral safety of LLM agents; post-hoc safety judging of trajectories"
+    },
+    {
+      "id": 38,
+      "name": "XSTest",
+      "category": "Over-Refusal",
+      "category_slug": "over-refusal",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · NAACL · Paul Rottger et al.",
+      "year_venue_origin_source": "2024 NAACL Paul Rottger et al.",
+      "website": {
+        "label": "github.com/paul-rottger/xstest",
+        "url": "https://github.com/paul-rottger/xstest"
+      },
+      "paper": {
+        "label": "aclanthology.org/2024.naacl-long.301",
+        "url": "https://aclanthology.org/2024.naacl-long.301/"
+      },
+      "details": "Test suite for exaggerated safety behaviour: 250 safe prompts across ten prompt types that well-calibrated models should answer (e.g., safe completions of stereotype-adjacent or identity-related statements), plus 200 unsafe contrast prompts that models should refuse. Reveals that popular chat models frequently refuse clearly safe instructions.",
+      "security_type": "Over-refusal / exaggerated safety; refusal calibration"
+    },
+    {
+      "id": 39,
+      "name": "OR-Bench",
+      "category": "Over-Refusal",
+      "category_slug": "over-refusal",
+      "year": "2025",
+      "year_sort": 2025,
+      "year_venue_origin": "2025 · ICML · Justin Cui et al.",
+      "year_venue_origin_source": "2025 ICML Justin Cui et al.",
+      "website": {
+        "label": "huggingface.co/datasets/bench-llm/or-bench",
+        "url": "https://huggingface.co/datasets/bench-llm/or-bench"
+      },
+      "paper": {
+        "label": "proceedings.mlr.press/v267/cui25a.html",
+        "url": "https://proceedings.mlr.press/v267/cui25a.html"
+      },
+      "details": "Over-refusal benchmark built with an automated pipeline for generating seemingly toxic but actually benign prompts: 80,000 over-refusal prompts across 10 rejection categories, ~1,000 hard prompts that remain challenging for state-of-the-art LLMs, and 600 genuinely toxic prompts as controls. Used to quantify over-refusal of 32 popular LLMs across 8 families.",
+      "security_type": "Over-refusal; safety-helpfulness trade-off"
+    },
+    {
+      "id": 40,
+      "name": "MM-SafetyBench",
+      "category": "Multimodal Safety",
+      "category_slug": "multimodal-safety",
+      "year": "2024",
+      "year_sort": 2024,
+      "year_venue_origin": "2024 · ECCV · Xin Liu et al.",
+      "year_venue_origin_source": "2024 ECCV Xin Liu et al.",
+      "website": {
+        "label": "github.com/isXinLiu/MM-SafetyBench",
+        "url": "https://github.com/isXinLiu/MM-SafetyBench"
+      },
+      "paper": {
+        "label": "dl.acm.org/doi/10.1007/978-3-031-72992-8_22",
+        "url": "https://dl.acm.org/doi/10.1007/978-3-031-72992-8_22"
+      },
+      "details": "Safety evaluation framework for multimodal LLMs (MLLMs) against image-based manipulation: query-relevant images can compromise MLLMs as if the text query itself were malicious. Dataset of 5,040 text-image pairs across 13 scenarios; evaluation of 12 state-of-the-art models shows MLLMs are breached even when the underlying LLM is safety-aligned.",
+      "security_type": "Multimodal jailbreaks; image+text safety of MLLMs"
+    },
+    {
+      "id": 41,
+      "name": "FigStep",
+      "category": "Multimodal Safety",
+      "category_slug": "multimodal-safety",
+      "year": "2025",
+      "year_sort": 2025,
+      "year_venue_origin": "2025 · AAAI · Yichen Gong et al.",
+      "year_venue_origin_source": "2025 AAAI Yichen Gong et al.",
+      "website": {
+        "label": "github.com/CryptoAILab/FigStep",
+        "url": "https://github.com/CryptoAILab/FigStep"
+      },
+      "paper": {
+        "label": "dl.acm.org/doi/10.1609/aaai.v39i22.34568",
+        "url": "https://dl.acm.org/doi/10.1609/aaai.v39i22.34568"
+      },
+      "details": "Black-box jailbreak against large vision-language models: harmful instructions are rendered as typographic content inside images (with benign-looking text queries), exploiting the modality gap between image encoders and the safety-trained language model. Achieves 82.50% average attack success on six open-source LVLMs.",
+      "security_type": "Typographic/visual jailbreaks of vision-language models"
+    }
+  ]
+}
