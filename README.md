@@ -6,11 +6,14 @@
 
 <a id="top"></a>
 
+<img width="1536" height="1024" alt="Logo" src="https://github.com/user-attachments/assets/d662502e-322e-46d5-9fdf-f9ba5600c967" /> # AIVERSE.IE
+
+
 # 🛡️ Awesome LLM Security Benchmarks
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) ![Benchmarks](https://img.shields.io/badge/benchmarks-41-blue) ![Categories](https://img.shields.io/badge/categories-8-blueviolet) ![Years](https://img.shields.io/badge/years-2018%E2%80%932025-lightgrey) ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing) ![Data: verified](https://img.shields.io/badge/data-verified%20vs%20source-success)
 
-> A curated, **machine-readable** catalog of **41 benchmarks, datasets, and evaluation frameworks** for the **security, safety, and trustworthiness of large language models (LLMs) and LLM-based agents** — organized into **8 categories** spanning adversarial robustness and jailbreaks, poisoning and backdoors, prompt injection, bias and fairness, residual/fine-tuning weaknesses, agent and tool security, over-refusal, and multimodal safety.
+> A curated catalog of **41 benchmarks, datasets, and evaluation frameworks** for the **security, safety, and trustworthiness of large language models (LLMs) and LLM-based agents**, organized into **8 categories** spanning adversarial robustness and jailbreaks, poisoning and backdoors, prompt injection, bias and fairness, residual/fine-tuning weaknesses, agent and tool security, over-refusal, and multimodal safety.
 
 Every entry records the benchmark's **category**, **year and venue**, an official **website / code** link, the **paper**, a concise **summary of what it measures**, and the **security type(s) targeted**. The whole catalog is exported as [JSON](data/benchmarks.json), [CSV](data/benchmarks.csv), and [YAML](data/benchmarks.yaml), and is regenerated from a single source of truth so the docs never drift from the data.
 
@@ -46,7 +49,7 @@ Every entry records the benchmark's **category**, **year and venue**, an officia
 
 ## About
 
-Evaluating whether an LLM is *secure* — not merely *capable* — has produced a sprawling literature of benchmarks, each probing a different failure mode: a model that caves to a jailbreak, one that leaks a backdoor planted at training time, an agent that obeys an instruction hidden in a retrieved web page, a chatbot that stereotypes a demographic group, or a vision-language model that is smuggled harmful content inside an innocuous-looking image.
+Evaluating whether an LLM is *secure* or not merely *capable* has produced a sprawling literature of benchmarks, each probing a different failure mode: a model that caves to a jailbreak, one that leaks a backdoor planted at training time, an agent that obeys an instruction hidden in a retrieved web page, a chatbot that stereotypes a demographic group, or a vision-language model that is smuggled harmful content inside an innocuous-looking image.
 
 This repository collects that landscape in one place. It is a **reference catalog**, not a leaderboard: the goal is to help researchers, red teamers, and builders quickly find the right evaluation for the risk they care about, follow it back to the primary source, and reuse a clean, structured dataset (JSON/CSV/YAML) in their own tooling.
 
