@@ -19,7 +19,11 @@ Every entry records the benchmark's **category**, **year and venue**, an officia
 
 ## Table of Contents
 
-- [Benchmarks by Category]
+- [About](#about)
+- [Catalog at a Glance](#catalog-at-a-glance)
+- [Categories](#categories)
+- [Quick Reference](#quick-reference)
+- [Benchmarks by Category](#benchmarks-by-category)
   - [🎯 Adversarial & Jailbreak](docs/adversarial-and-jailbreak.md) (5)
   - [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) (10)
   - [💉 Prompt Injection](docs/prompt-injection.md) (5)
