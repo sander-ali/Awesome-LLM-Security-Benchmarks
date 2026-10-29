@@ -2,9 +2,10 @@
 
 Thanks for helping improve the catalog! 🎉
 
+Please contact sandar.ali@gmail.com if you want to contribute to this repository. 
+
 This repository is **data-driven**: the README, the per-category pages under
-`docs/`, and the `CSV`/`YAML` exports are all **generated** from a single source
-of truth, [`data/benchmarks.json`](data/benchmarks.json). To keep everything
+`docs/`, and the `CSV`/`YAML` exports are all **generated** from a single source, [`data/benchmarks.json`](data/benchmarks.json). To keep everything
 consistent, please **edit the data and regenerate** rather than hand-editing the
 generated Markdown.
 
@@ -31,7 +32,7 @@ generated Markdown.
 
 ## Adding or correcting an entry
 
-### Option A — edit the JSON directly (fastest)
+### Option A: edit the JSON directly (fastest)
 
 1. Open [`data/benchmarks.json`](data/benchmarks.json).
 2. Add a new object to the `benchmarks` array (or fix an existing one) using the
@@ -48,7 +49,7 @@ generated Markdown.
 5. Commit **both** `data/benchmarks.json` and the regenerated files
    (`README.md`, `docs/*.md`, `data/benchmarks.csv`, `data/benchmarks.yaml`).
 
-### Option B — update the source workbook (for bulk edits)
+### Option B: update the source workbook (for bulk edits)
 
 If you are changing many rows at once, edit a copy of the spreadsheet under
 [`data/source/`](data/source/) and re-run the parser, then the builder:
