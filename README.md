@@ -6,7 +6,7 @@
 
 <a id="top"></a>
 
-<img width="1536" height="1024" alt="Logo" src="https://github.com/user-attachments/assets/d662502e-322e-46d5-9fdf-f9ba5600c967" /> # AIVERSE.IE
+<a href="https://aiverse.ie"> <img width="169" height="63" alt="image" src="https://github.com/user-attachments/assets/c82dead0-e5e9-4454-b167-ffa85d1cabcd" /> </a>
 
 
 # 🛡️ Awesome LLM Security Benchmarks
@@ -19,19 +19,15 @@ Every entry records the benchmark's **category**, **year and venue**, an officia
 
 ## Table of Contents
 
-- [About](#about)
-- [Catalog at a Glance](#catalog-at-a-glance)
-- [Categories](#categories)
-- [Quick Reference](#quick-reference)
-- [Benchmarks by Category](#benchmarks-by-category)
-  - [🎯 Adversarial & Jailbreak](#cat-adversarial-and-jailbreak) (5)
-  - [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) (10)
-  - [💉 Prompt Injection](#cat-prompt-injection) (5)
-  - [⚖️ Bias & Fairness](#cat-bias-and-fairness) (10)
-  - [🔁 VPI & Residual](#cat-vpi-and-residual) (3)
-  - [🤖 Agent & Tool Security](#cat-agent-and-tool-security) (4)
-  - [🚧 Over-Refusal](#cat-over-refusal) (2)
-  - [🖼️ Multimodal Safety](#cat-multimodal-safety) (2)
+- [Benchmarks by Category]
+  - [🎯 Adversarial & Jailbreak](docs/adversarial-and-jailbreak.md) (5)
+  - [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) (10)
+  - [💉 Prompt Injection](docs/prompt-injection.md) (5)
+  - [⚖️ Bias & Fairness](docs/bias-and-fairness.md) (10)
+  - [🔁 VPI & Residual](docs/vpi-and-residual) (3)
+  - [🤖 Agent & Tool Security](docs/agent-and-tool-security) (4)
+  - [🚧 Over-Refusal](docs/over-refusal) (2)
+  - [🖼️ Multimodal Safety](docs/multimodal-safety) (2)
 - [How to Use This Catalog](#how-to-use-this-catalog)
 - [Repository Structure](#repository-structure)
 - [Data Files & Schema](#data-files--schema)
@@ -100,14 +96,14 @@ The 41 benchmarks are grouped into 8 categories. Counts and coverage:
 
 | Category | Entries | What it covers |
 |----------|:------:|----------------|
-| [🎯 Adversarial & Jailbreak](#cat-adversarial-and-jailbreak) | 5 | Eliciting harmful or forbidden content via adversarial inputs, jailbreak prompts, gradient-based suffixes, and automated red teaming — and checking that refusals are genuine rather than 'empty'. |
-| [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 10 | Implanting hidden malicious behavior at training time, via model editing, or through data / knowledge-base corruption — trojans, backdoors, sleeper agents, and their detection. |
-| [💉 Prompt Injection](#cat-prompt-injection) | 5 | Direct and indirect injection of attacker instructions into LLM applications and tool-using agents, including payloads hidden in untrusted web, email, table, and image content. |
-| [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 10 | Measuring social bias, stereotyping, toxicity, and fairness across demographic groups in both language understanding and open-ended generation. |
-| [🔁 VPI & Residual](#cat-vpi-and-residual) | 3 | Virtual Prompt Injection and 'residual' weaknesses — shallow safety alignment that erodes after fine-tuning or re-tuning, even on small or benign-looking datasets. |
-| [🤖 Agent & Tool Security](#cat-agent-and-tool-security) | 4 | Safety and security of autonomous LLM agents that call tools, keep memory, and execute multi-step tasks in high-stakes environments. |
-| [🚧 Over-Refusal](#cat-over-refusal) | 2 | Exaggerated safety: models refusing clearly benign prompts, and the calibration of the helpfulness–safety trade-off. |
-| [🖼️ Multimodal Safety](#cat-multimodal-safety) | 2 | Jailbreaks and safety of vision-language and multimodal models where the image itself carries the malicious payload. |
+| <a href="docs/adversarial-and-jailbreak.md">[🎯 Adversarial & Jailbreak]</a> | 5 | Eliciting harmful or forbidden content via adversarial inputs, jailbreak prompts, gradient-based suffixes, and automated red teaming, and checking that refusals are genuine rather than 'empty'. |
+| [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 10 | Implanting hidden malicious behavior at training time, via model editing, or through data / knowledge-base corruption — trojans, backdoors, sleeper agents, and their detection. |
+| [💉 Prompt Injection](docs/prompt-injection.md) | 5 | Direct and indirect injection of attacker instructions into LLM applications and tool-using agents, including payloads hidden in untrusted web, email, table, and image content. |
+| [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 10 | Measuring social bias, stereotyping, toxicity, and fairness across demographic groups in both language understanding and open-ended generation. |
+| [🔁 VPI & Residual](docs/vpi-and-residual.md) | 3 | Virtual Prompt Injection and 'residual' weaknesses — shallow safety alignment that erodes after fine-tuning or re-tuning, even on small or benign-looking datasets. |
+| [🤖 Agent & Tool Security](docs/agent-and-tool-security.md) | 4 | Safety and security of autonomous LLM agents that call tools, keep memory, and execute multi-step tasks in high-stakes environments. |
+| [🚧 Over-Refusal](docs/over-refusal.md) | 2 | Exaggerated safety: models refusing clearly benign prompts, and the calibration of the helpfulness–safety trade-off. |
+| [🖼️ Multimodal Safety](docs/multimodal-safety.md) | 2 | Jailbreaks and safety of vision-language and multimodal models where the image itself carries the malicious payload. |
 
 <a id="quick-reference"></a>
 
@@ -117,47 +113,47 @@ All entries on one screen. Click a benchmark to jump to its detailed write-up; *
 
 | # | Benchmark | Category | Year | Code | Paper |
 |--:|-----------|----------|:----:|------|-------|
-| 1 | [HarmBench](#bm-1) | [🎯 Adversarial & Jailbreak](#cat-adversarial-and-jailbreak) | 2024 | [harmbench.org](https://harmbench.org/) | [arXiv](https://arxiv.org/abs/2402.04249) |
-| 2 | [JailbreakBench](#bm-2) | [🎯 Adversarial & Jailbreak](#cat-adversarial-and-jailbreak) | 2024 | [jailbreakbench.github.io](https://jailbreakbench.github.io/) | [arXiv](https://arxiv.org/abs/2404.01318) |
-| 3 | [AdvBench](#bm-3) | [🎯 Adversarial & Jailbreak](#cat-adversarial-and-jailbreak) | 2023 | [llm-attacks.org](https://llm-attacks.org/) | [arXiv](https://arxiv.org/abs/2307.15043) |
-| 4 | [StrongREJECT](#bm-4) | [🎯 Adversarial & Jailbreak](#cat-adversarial-and-jailbreak) | 2024 | [strong-reject.readthedocs.io](https://strong-reject.readthedocs.io/) | [arXiv](https://arxiv.org/abs/2402.10260) |
-| 5 | [Do Anything Now (DAN) Jailbreak Prompts](#bm-5) | [🎯 Adversarial & Jailbreak](#cat-adversarial-and-jailbreak) | 2024 | [jailbreak-llms.xinyueshen.me](https://jailbreak-llms.xinyueshen.me/) | [arXiv](https://arxiv.org/abs/2308.03825) |
-| 6 | [TrojLLM](#bm-6) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2024 | [UCF-ML-Research/TrojLLM](https://github.com/UCF-ML-Research/TrojLLM) | [arXiv](https://arxiv.org/abs/2306.06815) |
-| 7 | [BackdoorLLM](#bm-7) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2025 | [bboylyg/BackdoorLLM](https://github.com/bboylyg/BackdoorLLM) | [arXiv](https://arxiv.org/abs/2408.12798) |
-| 8 | [BadEdit](#bm-8) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2024 | [Lyz1213/BadEdit](https://github.com/Lyz1213/BadEdit) | [arXiv](https://arxiv.org/abs/2403.13355) |
-| 9 | [PoisonedRAG](#bm-9) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2025 | [sleeepeer/PoisonedRAG](https://github.com/sleeepeer/PoisonedRAG) | [arXiv](https://arxiv.org/abs/2402.07867) |
-| 10 | [AgentPoison](#bm-10) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2024 | [AI-secure/AgentPoison](https://github.com/AI-secure/AgentPoison) | [NeurIPS](https://neurips.cc/virtual/2024/poster/94715) |
-| 11 | [BadChain](#bm-11) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2024 | [Django-Jiang/BadChain](https://github.com/Django-Jiang/BadChain) | [arXiv](https://arxiv.org/abs/2401.12242) |
-| 12 | [Instructions as Backdoors](#bm-12) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2024 | [cnut1648.github.io](https://cnut1648.github.io/instruction-attack/) | [arXiv](https://arxiv.org/abs/2305.14710) |
-| 13 | [Sleeper Agents (Anthropic)](#bm-13) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2024 | [sleeper-agents-and-how-to-tame-them](https://huggingface.co/blog/tngtech/sleeper-agents-and-how-to-tame-them) | [arXiv](https://arxiv.org/abs/2401.05566) |
-| 14 | [Trojan Detection Challenge 2023 (LLM Edition)](#bm-14) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2023 | [neurips.cc](https://neurips.cc/virtual/2023/competition/66583) | [arXiv](https://arxiv.org/abs/2404.13660) |
-| 15 | [DARPA TrojAI (NIST evaluation series)](#bm-15) | [🧪 Poisoning & Backdoor](#cat-poisoning-and-backdoor) | 2020–2024 | [pages.nist.gov](https://pages.nist.gov/trojai/) | [arXiv](https://arxiv.org/abs/2602.07152) |
-| 16 | [AgentDojo](#bm-16) | [💉 Prompt Injection](#cat-prompt-injection) | 2024 | [agentdojo.spylab.ai](https://agentdojo.spylab.ai/) | [OpenReview](https://openreview.net/forum?id=m1YYAQjO3w) |
-| 17 | [InjecAgent](#bm-17) | [💉 Prompt Injection](#cat-prompt-injection) | 2024 | [uiuc-kang-lab/InjecAgent](https://github.com/uiuc-kang-lab/InjecAgent) | [ACL Anthology](https://aclanthology.org/2024.findings-acl.624/) |
-| 18 | [BIPIA](#bm-18) | [💉 Prompt Injection](#cat-prompt-injection) | 2023 | [microsoft/BIPIA](https://github.com/microsoft/BIPIA) | [arXiv](https://arxiv.org/abs/2312.14197) |
-| 19 | [Tensor Trust](#bm-19) | [💉 Prompt Injection](#cat-prompt-injection) | 2024 | [tensortrust.ai](https://tensortrust.ai/) | [arXiv](https://arxiv.org/abs/2311.01011) |
-| 20 | [Open-Prompt-Injection Benchmark](#bm-20) | [💉 Prompt Injection](#cat-prompt-injection) | 2023 | [liu00222/Open-Prompt-Injection](https://github.com/liu00222/Open-Prompt-Injection) | [arXiv](https://arxiv.org/abs/2310.12815) |
-| 21 | [BBQ (Bias Benchmark for QA)](#bm-21) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2022 | [nyu-mll/BBQ](https://github.com/nyu-mll/BBQ) | [ACL Anthology](https://aclanthology.org/2022.findings-acl.165/) |
-| 22 | [CrowS-Pairs](#bm-22) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2020 | [nyu-mll/crows-pairs](https://github.com/nyu-mll/crows-pairs) | [ACL Anthology](https://aclanthology.org/2020.emnlp-main.154/) |
-| 23 | [BOLD](#bm-23) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2021 | [amazon-science/bold](https://github.com/amazon-science/bold) | [ACM DL](https://dl.acm.org/doi/10.1145/3442188.3445924) |
-| 24 | [StereoSet](#bm-24) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2021 | [moinnadeem/StereoSet](https://github.com/moinnadeem/StereoSet) | [ACL Anthology](https://aclanthology.org/2021.acl-long.416/) |
-| 25 | [ToxiGen](#bm-25) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2022 | [microsoft/TOXIGEN](https://github.com/microsoft/TOXIGEN) | [ACL Anthology](https://aclanthology.org/2022.acl-long.234/) |
-| 26 | [RealToxicityPrompts](#bm-26) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2020 | [real-toxicity-prompts](https://huggingface.co/datasets/allenai/real-toxicity-prompts) | [ACL Anthology](https://aclanthology.org/2020.findings-emnlp.301/) |
-| 27 | [Winogender Schemas](#bm-27) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2018 | [rudinger/winogender-schemas](https://github.com/rudinger/winogender-schemas) | [ACL Anthology](https://aclanthology.org/N18-2002/) |
-| 28 | [WinoBias](#bm-28) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2018 | [uclanlp/corefBias](https://github.com/uclanlp/corefBias) | [ACL Anthology](https://aclanthology.org/N18-2003/) |
-| 29 | [HolisticBias](#bm-29) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2022 | [facebookresearch/ResponsibleNLP](https://github.com/facebookresearch/ResponsibleNLP/tree/main/holistic_bias) | [ACL Anthology](https://aclanthology.org/2022.emnlp-main.625/) |
-| 30 | [DecodingTrust](#bm-30) | [⚖️ Bias & Fairness](#cat-bias-and-fairness) | 2023 | [decodingtrust.github.io](https://decodingtrust.github.io/) | [ACM DL](https://dl.acm.org/doi/10.5555/3666122.3667483) |
-| 31 | [Virtual Prompt Injection (VPI)](#bm-31) | [🔁 VPI & Residual](#cat-vpi-and-residual) | 2024 | [poison-llm.github.io](https://poison-llm.github.io/) | [ACL Anthology](https://aclanthology.org/2024.naacl-long.337/) |
-| 32 | [Fine-tuning Aligned LMs Compromises Safety](#bm-32) | [🔁 VPI & Residual](#cat-vpi-and-residual) | 2024 | [LLM-Tuning-Safety/LLMs-Finetuning-Safety](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety) | [ICLR](https://proceedings.iclr.cc/paper_files/paper/2024/file/83b7da3ed13f06c13ce82235c8eedf35-Paper-Conference.pdf) |
-| 33 | [Shadow Alignment](#bm-33) | [🔁 VPI & Residual](#cat-vpi-and-residual) | 2023 | [BeyonderXX/ShadowAlignment](https://github.com/BeyonderXX/ShadowAlignment) | [arXiv](https://arxiv.org/abs/2310.02949) |
-| 34 | [Agent Security Bench (ASB)](#bm-34) | [🤖 Agent & Tool Security](#cat-agent-and-tool-security) | 2025 | [agiresearch/ASB](https://github.com/agiresearch/ASB) | [OpenReview](https://openreview.net/forum?id=V4y0CpX4hK) |
-| 35 | [ToolEmu](#bm-35) | [🤖 Agent & Tool Security](#cat-agent-and-tool-security) | 2024 | [ryoungj/ToolEmu](https://github.com/ryoungj/ToolEmu) | [OpenReview](https://openreview.net/forum?id=GEcwtMk1uA) |
-| 36 | [AgentHarm](#bm-36) | [🤖 Agent & Tool Security](#cat-agent-and-tool-security) | 2025 | [AgentHarm](https://huggingface.co/datasets/ai-safety-institute/AgentHarm) | [OpenReview](https://openreview.net/forum?id=AC5n7xHuR1) |
-| 37 | [R-Judge](#bm-37) | [🤖 Agent & Tool Security](#cat-agent-and-tool-security) | 2024 | [Lordog/R-Judge](https://github.com/Lordog/R-Judge) | [ACL Anthology](https://aclanthology.org/2024.findings-emnlp.79/) |
-| 38 | [XSTest](#bm-38) | [🚧 Over-Refusal](#cat-over-refusal) | 2024 | [paul-rottger/xstest](https://github.com/paul-rottger/xstest) | [ACL Anthology](https://aclanthology.org/2024.naacl-long.301/) |
-| 39 | [OR-Bench](#bm-39) | [🚧 Over-Refusal](#cat-over-refusal) | 2025 | [or-bench](https://huggingface.co/datasets/bench-llm/or-bench) | [PMLR](https://proceedings.mlr.press/v267/cui25a.html) |
-| 40 | [MM-SafetyBench](#bm-40) | [🖼️ Multimodal Safety](#cat-multimodal-safety) | 2024 | [isXinLiu/MM-SafetyBench](https://github.com/isXinLiu/MM-SafetyBench) | [ACM DL](https://dl.acm.org/doi/10.1007/978-3-031-72992-8_22) |
-| 41 | [FigStep](#bm-41) | [🖼️ Multimodal Safety](#cat-multimodal-safety) | 2025 | [CryptoAILab/FigStep](https://github.com/CryptoAILab/FigStep) | [ACM DL](https://dl.acm.org/doi/10.1609/aaai.v39i22.34568) |
+| 1 | [HarmBench](#bm-1) | <a href="docs/adversarial-and-jailbreak.md">[🎯 Adversarial & Jailbreak]</a> | 2024 | [harmbench.org](https://harmbench.org/) | [arXiv](https://arxiv.org/abs/2402.04249) |
+| 2 | [JailbreakBench](#bm-2) | <a href="docs/adversarial-and-jailbreak.md">[🎯 Adversarial & Jailbreak]</a> | 2024 | [jailbreakbench.github.io](https://jailbreakbench.github.io/) | [arXiv](https://arxiv.org/abs/2404.01318) |
+| 3 | [AdvBench](#bm-3) | <a href="docs/adversarial-and-jailbreak.md">[🎯 Adversarial & Jailbreak]</a> | 2023 | [llm-attacks.org](https://llm-attacks.org/) | [arXiv](https://arxiv.org/abs/2307.15043) |
+| 4 | [StrongREJECT](#bm-4) | <a href="docs/adversarial-and-jailbreak.md">[🎯 Adversarial & Jailbreak]</a> | 2024 | [strong-reject.readthedocs.io](https://strong-reject.readthedocs.io/) | [arXiv](https://arxiv.org/abs/2402.10260) |
+| 5 | [Do Anything Now (DAN) Jailbreak Prompts](#bm-5) | <a href="docs/adversarial-and-jailbreak.md">[🎯 Adversarial & Jailbreak]</a> | 2024 | [jailbreak-llms.xinyueshen.me](https://jailbreak-llms.xinyueshen.me/) | [arXiv](https://arxiv.org/abs/2308.03825) |
+| 6 | [TrojLLM](#bm-6) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2024 | [UCF-ML-Research/TrojLLM](https://github.com/UCF-ML-Research/TrojLLM) | [arXiv](https://arxiv.org/abs/2306.06815) |
+| 7 | [BackdoorLLM](#bm-7) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2025 | [bboylyg/BackdoorLLM](https://github.com/bboylyg/BackdoorLLM) | [arXiv](https://arxiv.org/abs/2408.12798) |
+| 8 | [BadEdit](#bm-8) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2024 | [Lyz1213/BadEdit](https://github.com/Lyz1213/BadEdit) | [arXiv](https://arxiv.org/abs/2403.13355) |
+| 9 | [PoisonedRAG](#bm-9) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2025 | [sleeepeer/PoisonedRAG](https://github.com/sleeepeer/PoisonedRAG) | [arXiv](https://arxiv.org/abs/2402.07867) |
+| 10 | [AgentPoison](#bm-10) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2024 | [AI-secure/AgentPoison](https://github.com/AI-secure/AgentPoison) | [NeurIPS](https://neurips.cc/virtual/2024/poster/94715) |
+| 11 | [BadChain](#bm-11) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2024 | [Django-Jiang/BadChain](https://github.com/Django-Jiang/BadChain) | [arXiv](https://arxiv.org/abs/2401.12242) |
+| 12 | [Instructions as Backdoors](#bm-12) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2024 | [cnut1648.github.io](https://cnut1648.github.io/instruction-attack/) | [arXiv](https://arxiv.org/abs/2305.14710) |
+| 13 | [Sleeper Agents (Anthropic)](#bm-13) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2024 | [sleeper-agents-and-how-to-tame-them](https://huggingface.co/blog/tngtech/sleeper-agents-and-how-to-tame-them) | [arXiv](https://arxiv.org/abs/2401.05566) |
+| 14 | [Trojan Detection Challenge 2023 (LLM Edition)](#bm-14) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2023 | [neurips.cc](https://neurips.cc/virtual/2023/competition/66583) | [arXiv](https://arxiv.org/abs/2404.13660) |
+| 15 | [DARPA TrojAI (NIST evaluation series)](#bm-15) | [🧪 Poisoning & Backdoor](docs/poisoning-and-backdoor.md) | 2020–2024 | [pages.nist.gov](https://pages.nist.gov/trojai/) | [arXiv](https://arxiv.org/abs/2602.07152) |
+| 16 | [AgentDojo](#bm-16) | [💉 Prompt Injection](docs/prompt-injection.md) | 2024 | [agentdojo.spylab.ai](https://agentdojo.spylab.ai/) | [OpenReview](https://openreview.net/forum?id=m1YYAQjO3w) |
+| 17 | [InjecAgent](#bm-17) | [💉 Prompt Injection](docs/prompt-injection.md) | 2024 | [uiuc-kang-lab/InjecAgent](https://github.com/uiuc-kang-lab/InjecAgent) | [ACL Anthology](https://aclanthology.org/2024.findings-acl.624/) |
+| 18 | [BIPIA](#bm-18) | [💉 Prompt Injection](docs/prompt-injection.md) | 2023 | [microsoft/BIPIA](https://github.com/microsoft/BIPIA) | [arXiv](https://arxiv.org/abs/2312.14197) |
+| 19 | [Tensor Trust](#bm-19) | [💉 Prompt Injection](docs/prompt-injection.md) | 2024 | [tensortrust.ai](https://tensortrust.ai/) | [arXiv](https://arxiv.org/abs/2311.01011) |
+| 20 | [Open-Prompt-Injection Benchmark](#bm-20) | [💉 Prompt Injection](docs/prompt-injection.md) | 2023 | [liu00222/Open-Prompt-Injection](https://github.com/liu00222/Open-Prompt-Injection) | [arXiv](https://arxiv.org/abs/2310.12815) |
+| 21 | [BBQ (Bias Benchmark for QA)](#bm-21) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2022 | [nyu-mll/BBQ](https://github.com/nyu-mll/BBQ) | [ACL Anthology](https://aclanthology.org/2022.findings-acl.165/) |
+| 22 | [CrowS-Pairs](#bm-22) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2020 | [nyu-mll/crows-pairs](https://github.com/nyu-mll/crows-pairs) | [ACL Anthology](https://aclanthology.org/2020.emnlp-main.154/) |
+| 23 | [BOLD](#bm-23) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2021 | [amazon-science/bold](https://github.com/amazon-science/bold) | [ACM DL](https://dl.acm.org/doi/10.1145/3442188.3445924) |
+| 24 | [StereoSet](#bm-24) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2021 | [moinnadeem/StereoSet](https://github.com/moinnadeem/StereoSet) | [ACL Anthology](https://aclanthology.org/2021.acl-long.416/) |
+| 25 | [ToxiGen](#bm-25) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2022 | [microsoft/TOXIGEN](https://github.com/microsoft/TOXIGEN) | [ACL Anthology](https://aclanthology.org/2022.acl-long.234/) |
+| 26 | [RealToxicityPrompts](#bm-26) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2020 | [real-toxicity-prompts](https://huggingface.co/datasets/allenai/real-toxicity-prompts) | [ACL Anthology](https://aclanthology.org/2020.findings-emnlp.301/) |
+| 27 | [Winogender Schemas](#bm-27) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2018 | [rudinger/winogender-schemas](https://github.com/rudinger/winogender-schemas) | [ACL Anthology](https://aclanthology.org/N18-2002/) |
+| 28 | [WinoBias](#bm-28) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2018 | [uclanlp/corefBias](https://github.com/uclanlp/corefBias) | [ACL Anthology](https://aclanthology.org/N18-2003/) |
+| 29 | [HolisticBias](#bm-29) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2022 | [facebookresearch/ResponsibleNLP](https://github.com/facebookresearch/ResponsibleNLP/tree/main/holistic_bias) | [ACL Anthology](https://aclanthology.org/2022.emnlp-main.625/) |
+| 30 | [DecodingTrust](#bm-30) | [⚖️ Bias & Fairness](docs/bias-and-fairness.md) | 2023 | [decodingtrust.github.io](https://decodingtrust.github.io/) | [ACM DL](https://dl.acm.org/doi/10.5555/3666122.3667483) |
+| 31 | [Virtual Prompt Injection (VPI)](#bm-31) | [🔁 VPI & Residual](docs/vpi-and-residual.md) | 2024 | [poison-llm.github.io](https://poison-llm.github.io/) | [ACL Anthology](https://aclanthology.org/2024.naacl-long.337/) |
+| 32 | [Fine-tuning Aligned LMs Compromises Safety](#bm-32) | [🔁 VPI & Residual](docs/vpi-and-residual.md) | 2024 | [LLM-Tuning-Safety/LLMs-Finetuning-Safety](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety) | [ICLR](https://proceedings.iclr.cc/paper_files/paper/2024/file/83b7da3ed13f06c13ce82235c8eedf35-Paper-Conference.pdf) |
+| 33 | [Shadow Alignment](#bm-33) | [🔁 VPI & Residual](docs/vpi-and-residual.md) | 2023 | [BeyonderXX/ShadowAlignment](https://github.com/BeyonderXX/ShadowAlignment) | [arXiv](https://arxiv.org/abs/2310.02949) |
+| 34 | [Agent Security Bench (ASB)](#bm-34) | [🤖 Agent & Tool Security](docs/agent-and-tool-security.md) | 2025 | [agiresearch/ASB](https://github.com/agiresearch/ASB) | [OpenReview](https://openreview.net/forum?id=V4y0CpX4hK) |
+| 35 | [ToolEmu](#bm-35) | [🤖 Agent & Tool Security](docs/agent-and-tool-security.md) | 2024 | [ryoungj/ToolEmu](https://github.com/ryoungj/ToolEmu) | [OpenReview](https://openreview.net/forum?id=GEcwtMk1uA) |
+| 36 | [AgentHarm](#bm-36) | [🤖 Agent & Tool Security](docs/agent-and-tool-security.md) | 2025 | [AgentHarm](https://huggingface.co/datasets/ai-safety-institute/AgentHarm) | [OpenReview](https://openreview.net/forum?id=AC5n7xHuR1) |
+| 37 | [R-Judge](#bm-37) | [🤖 Agent & Tool Security](docs/agent-and-tool-security.md) | 2024 | [Lordog/R-Judge](https://github.com/Lordog/R-Judge) | [ACL Anthology](https://aclanthology.org/2024.findings-emnlp.79/) |
+| 38 | [XSTest](#bm-38) | [🚧 Over-Refusal](docs/over-refusal.md) | 2024 | [paul-rottger/xstest](https://github.com/paul-rottger/xstest) | [ACL Anthology](https://aclanthology.org/2024.naacl-long.301/) |
+| 39 | [OR-Bench](#bm-39) | [🚧 Over-Refusal](docs/over-refusal.md) | 2025 | [or-bench](https://huggingface.co/datasets/bench-llm/or-bench) | [PMLR](https://proceedings.mlr.press/v267/cui25a.html) |
+| 40 | [MM-SafetyBench](#bm-40) | [🖼️ Multimodal Safety](docs/multimodal-safety.md) | 2024 | [isXinLiu/MM-SafetyBench](https://github.com/isXinLiu/MM-SafetyBench) | [ACM DL](https://dl.acm.org/doi/10.1007/978-3-031-72992-8_22) |
+| 41 | [FigStep](#bm-41) | [🖼️ Multimodal Safety](docs/multimodal-safety.md) | 2025 | [CryptoAILab/FigStep](https://github.com/CryptoAILab/FigStep) | [ACM DL](https://dl.acm.org/doi/10.1609/aaai.v39i22.34568) |
 
 <a id="benchmarks-by-category"></a>
 
