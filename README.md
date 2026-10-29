@@ -6,7 +6,8 @@
 
 <a id="top"></a>
 
-<a href="https://aiverse.ie"> <img width="169" height="63" alt="image" src="https://github.com/user-attachments/assets/c82dead0-e5e9-4454-b167-ffa85d1cabcd" /> </a>
+<a href="https://aiverse.ie"> <img width="84" height="32" alt="logo_wb" src="https://github.com/user-attachments/assets/0ab29b36-1907-4501-8b5e-c6cf94bcd6ba" />
+ </a>
 
 
 # 🛡️ Awesome LLM Security Benchmarks
