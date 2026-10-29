@@ -1,7 +1,7 @@
 # Security & Responsible-Use Policy
 
 This repository is a **catalog of security research**. It is documentation and
-data only — it contains **no runnable model, no attack code, no exploit, no
+data only, it contains **no runnable model, no attack code, no exploit, no
 jailbreak prompts, and no poisoned artifacts**. The Python scripts under
 `scripts/` are offline generators that read a local spreadsheet and emit
 Markdown/JSON/CSV/YAML; they perform no network calls and execute no untrusted
@@ -25,8 +25,8 @@ disclosure responsibly.
 ## Responsible use of the linked benchmarks
 
 Many benchmarks indexed here deliberately contain **adversarial, offensive,
-explicit, or otherwise sensitive material** — jailbreak prompts, harmful-request
-datasets, toxic text, backdoored models, and attack tooling — that exists purely
+explicit, or otherwise sensitive material**, jailbreak prompts, harmful-request
+datasets, toxic text, backdoored models, and attack tooling, that exists purely
 for **defensive research and evaluation**.
 
 When you follow a link out of this catalog:
